@@ -1,0 +1,21 @@
+{
+  "name": "finalportfolio",
+  "version": "1.0.0",
+  "description": "ma portfolio to finally get a job ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dok Mitry",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "node-normalize-scss": "^8.0.1",
+    "normalize.css": "^8.0.1"
+  },
+  "browserslist":  "defaults"
+}

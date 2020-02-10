@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTC Junior task</title>
+</head>
+<body>
+     <script src="js/index.js"></script>
+
+     <div class="form-overlay" id="form-overlay">
+          <div class="outer">
+               <form class="form-overlay__container" action="">
+                    <h2>Вход</h2>
+                    <input type="text" id="name" placeholder="Логин">
+                    <input type="text" id="password" placeholder="Пароль">
+                    <div class="checkbox__container">
+                         <input type="checkbox" id="remember" name="remember">
+                         <label class="remember_label" for="remember"><p>Запомнить</p></label>
+                    </div>
+                    <div id="submit_btn" class="form-login">
+                         войти
+                    </div>   
+               </form>
+          </div>
+     </div>
+
+     <div class="wrapper">
+
+          <!-- Header -->
+
+          <header>
+               <li>
+                    <div class="logo">
+                         <img src="img/sign.svg" alt="logo">
+                         <h1>Видеосервис</h1> 
+                    </div>
+               </li>
+               <li>
+                    <div class="search">
+                         <input type="text" placeholder="Поиск..." class="search__input" onfocus="this.placeholder=''"
+                         onblur="this.placeholder='Поиск...'">
+                         <button class="search__button">Найти</button> 
+                    </div>
+               </li>
+               <li>
+                    <div class="auth" id="auth_login">
+                         <p id="auth_name" class="name"></p>
+                         <button id="auth_login_btn">Выйти</button>
+                    </div>
+                    <button id="login-btn" class="login">
+                         войти
+                    </button>
+               </li>
+          </header>
+
+          <!-- Tabs -->
+
+          <ul class="tabs">
+               <li data-tab-target="#films">Фильмы</li>
+               <li data-tab-target="#news">Телеканалы</li>
+          </ul>
+
+          <!-- Films -->
+          <div class="active" id="films" data-tab-content>
+               <section class="films">
+                    <h2 class="films__header">🔥 Новинки</h2>
+                    <ul class="films__list">
+                         <li id="1_item" class="cat films__list_item ">
+                              <div class="films__description">
+                                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                   when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                              </div>
+                              <div class="films__overlay"></div>
+                              <div class="films__list_item_img" >
+                                   
+                              </div>
+                              <h4 class="batman films__list_item_name">Мульт в кино. Выпуск №103.Некогда грустить!</h4>
+                         </li>
+
+                         <li id="2_item" class="batman films__list_item" >
+                              <div class="films__description">
+                                   Паттинсону предстоит воплотить на экране новую версию Бэтмена —
+                                   бесстрашного защитника Готэма, одинокого борца с преступностью.
+                                   На данный момент никто не знает, каким станет Темный рыцарь
+                              </div>
+                              <div class="films__overlay"></div>
+                              <div class="films__list_item_img">
+                                   
+                              </div>
+                              <h4 class="films__list_item_name">Новый Бэтмен</h4>
+                         </li>
+
+                         <li id="3_item" class="hollywood films__list_item" >
+                              <div class="films__description">
+                                   Фильм повествует о череде событий, произошедших в Голливуде в 1969 году,
+                                   на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут
+                                   пытаются найти свое место в стремительно меняющемся мире киноиндустрии.
+                              </div>
+                              <div class="films__overlay"></div>
+                              <div class="films__list_item_img">
+                                   
+                              </div>
+                              <h4 class="films__list_item_name">Однажды... в Голливуде</h4>
+                         </li>
+
+                         <li id="4_item" class="strip films__list_item" >
+                              <div class="films__description">
+                                   Танцовщицы элитного стриптиз-клуба, клиенты которого — известные финансисты с Уолл-Стрит —
+                                   привыкли к большим заработкам и роскошной жизни. 
+                                   Но после финансового кризиса 2008 года посетителей в клубе заметно поубавилось, 
+                                   и деньги к девушкам уже не текут рекой.
+                              </div>
+                              <div class="films__overlay"></div>
+                              <div class="films__list_item_img">
+                                   
+                              </div>
+                              <h4 class="films__list_item_name">Стриптизерши</h4>
+                         </li>
+                    </ul>
+               </section>
+
+               <section class="geners">
+                    <p class="geners__header">Жанры</p>
+                    <ul class="geners__list">
+                         <li class="geners__list_item" id="comedy">
+                              <div class="overlay"></div>
+                              <h2 class="geners__list_item_smile">😁</h2>
+                              <h4 class="geners__list_item_name">Комедии</h4>
+                         </li>
+                         <li class="geners__list_item" id="drama">
+                              <div class="overlay"></div>
+                              <h2 class="geners__list_item_smile">😭</h2>
+                              <h4 class="geners__list_item_name">Драмы</h4>
+                         </li>
+                         <li class="geners__list_item" id="fantastic">
+                              <div class="overlay"></div>
+                              <h2 class="geners__list_item_smile">👽</h2>
+                              <h4 class="geners__list_item_name">Фантастика</h4>
+                         </li>
+                         <li class="geners__list_item" id="horror">
+                              <div class="overlay"></div>
+                              <h2 class="geners__list_item_smile">👻</h2>
+                              <h4 class="geners__list_item_name">Ужасы</h4>
+                         </li>
+                    </ul>
+               </section>
+          </div>
+
+          <!-- TV -->
+
+          <div id="news" data-tab-content>
+               <div class="tv__container">
+                    <ul class="tv__container_list">
+                         <li class="first tv__container_list_item">
+                              <div class="logo">
+                                   <img src="img/first_channel.png" alt="">
+                              </div>
+                              <ul class="tv-list-program">
+                                   <h4 class="tv-list-program__header">
+                                        Первый канал
+                                   </h4>
+                                   <ul class="tv-list-program__time">
+                                        <li class="tv-list-program_current">13:00</li>
+                                        <li>14:00</li>
+                                        <li>15:00</li>
+                                   </ul>
+                                   <ul class="tv-list-program__name">
+                                        <li class="tv-list-program_current">Новости (с субтитрами)</li>
+                                        <li>Давай поженимся</li>
+                                        <li>Другие новости</li>
+                                   </ul>
+                              </ul>
+                         </li>
+
+                         <li class="two tv__container_list_item">
+                              <div class="logo">
+                                   <img src="img/2x2.png" alt="">
+                              </div>
+                              <ul class="tv-list-program">
+                                   <h4 class="tv-list-program__header">
+                                        2x2
+                                   </h4>
+                                   <ul class="tv-list-program__time">
+                                        <li class="tv-list-program_current">13:00</li>
+                                        <li>14:00</li>
+                                        <li>15:00</li>
+                                   </ul>
+                                   <ul class="tv-list-program__name">
+                                        <li class="tv-list-program_current">МУЛЬТ ТВ.Сезон 4, 7 серия</li>
+                                        <li>ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</li>
+                                        <li>БУРДАШЕВ. Сезон 1, 20 серия</li>
+                                   </ul>
+                              </ul>
+                         </li>
+
+                         <li class="rbc tv__container_list_item">
+                              <div class="logo">
+                                   <img src="img/rbc.png" alt="">
+                              </div>
+                              <ul class="tv-list-program">
+                                   <h4 class="tv-list-program__header">
+                                        РБК
+                                   </h4>
+                                   <ul class="tv-list-program__time">
+                                        <li class="tv-list-program_current">13:00</li>
+                                        <li>14:00</li>
+                                        <li>15:00</li>
+                                   </ul>
+                                   <ul class="tv-list-program__name">
+                                        <li class="tv-list-program_current">ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС</li>
+                                        <li>ДЕНЬ. Главные темы</li>
+                                        <li>Главные новости</li>
+                                   </ul>
+                              </ul>
+                         </li>
+
+                         <li class="amedia tv__container_list_item">
+                              <div class="logo">
+                                   <img src="img/amedia.png" alt="">
+                              </div>
+                              <ul class="tv-list-program">
+                                   <h4 class="tv-list-program__header">
+                                        AMEDIA PREMIUM
+                                   </h4>
+                                   <ul class="tv-list-program__time">
+                                        <li class="tv-list-program_current">13:00</li>
+                                        <li>14:00</li>
+                                        <li>15:00</li>
+                                   </ul>
+                                   <ul class="tv-list-program__name">
+                                        <li class="tv-list-program_current">Клиент всегда мёртв</li>
+                                        <li>Голодные игры: Сойка-пересмешница. Часть I</li>
+                                        <li>Секс в большом городе</li>
+                                   </ul>
+                              </ul>
+                         </li>
+
+                         <li class="amedia tv__container_list_item">
+                              <div class="logo">
+                                   <img src="img/amedia.png" alt="">
+                              </div>
+                              <ul class="tv-list-program">
+                                   <h4 class="tv-list-program__header">
+                                        AMEDIA PREMIUM
+                                   </h4>
+                                   <ul class="tv-list-program__time">
+                                        <li class="tv-list-program_current">13:00</li>
+                                        <li>14:00</li>
+                                        <li>15:00</li>
+                                   </ul>
+                                   <ul class="tv-list-program__name">
+                                        <li class="tv-list-program_current">Клиент всегда мёртв</li>
+                                        <li>Голодные игры: Сойка-пересмешница. Часть I</li>
+                                        <li>Секс в большом городе</li>
+                                   </ul>
+                              </ul>
+                         </li>
+                    </ul>
+               </div>
+          </div>
+
+     </div>
+
+     <!-- Footer -->
+
+     <footer>
+          <div class="footer__container">
+               <img src="img/htc_logo.svg" alt="">
+               <ul class="footer__list">
+                    <li class="footer__list_item">426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</li>
+                    <li class="footer__list_item">+7 (3412) 93-88-61, 43-29-29</li>
+                    <a href=""><li class="footer__list_item footer__link">htc-cs.ru</li></a>
+               </ul>
+          </div>
+     </footer>
+          
+     
+               
+</body>
+</html>

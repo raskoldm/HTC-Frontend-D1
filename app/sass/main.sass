@@ -1,0 +1,585 @@
+@import "normalize"
+
+
+//Variables
+$htc-red: #E5261E;
+$htc-color: #1F4766;
+    
+//Scrollbar
+
+/* width */
+::-webkit-scrollbar 
+  width: 5px
+
+
+/* Track */
+::-webkit-scrollbar-track 
+  box-shadow: inset 0 0 5px grey
+  border-radius: 5px
+  border-left: solid 5px transparent 
+
+ 
+/* Handle */
+::-webkit-scrollbar-thumb 
+  background: #BDBDBD
+  border-radius: 5px
+  border-left: solid 5px transparent
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover 
+  background: #b30000
+
+*:focus 
+    outline: none 
+
+*
+    margin-block-start: 0
+    padding-block-start: 0 
+    margin-block-end: 0
+    padding-block-end: 0 
+    a 
+        text-decoration: none      
+
+body 
+    width: 100%
+    height: 100%
+    margin: 0
+    padding: 0
+    font-family: 'Rubik', sans-serif
+    color: black
+
+
+.form-overlay
+    z-index: 5
+    display: none
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    height: 100%
+    width: 100%
+    transition: .5s ease
+    background-color: rgba(0, 0, 0, 0.8)
+
+.outer
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center    
+
+.form-overlay__container
+    opacity: 100
+    z-index: 7
+    width: 304px
+    height: 394px
+    margin: 0 auto
+    padding-top: 36px 
+    background-color: white
+    border-radius: 10px
+    text-align: center
+    h2 
+        margin-bottom: 32px
+        font-size: 28px 
+    input
+        width: 232px
+        height: 25px
+        border: 0
+        border-bottom: 1px solid black
+        font-size: 16px
+        margin-bottom: 25px
+        
+    .checkbox__container
+        width: 232px
+        margin: 0
+        line-height: 25px
+        height: 25px
+        margin: 0 auto
+        text-align: left
+        #remember 
+            width: 18px
+            float: left
+            clear: right
+            margin-right: 5px
+            margin-bottom: 0
+            text-align: left
+            
+    .remember_label
+        float: left
+        clear: right
+        font-size: 16px 
+        p  
+           
+        
+
+    .form-login
+        width: 113px    
+        height: 38px
+        line-height: 38px
+        vertical-align: center
+        margin-top: 130px
+        margin-right: auto
+        margin-left: auto  
+        background-color: $htc-red
+        border-radius: 4px
+        border: none 
+        font-size: 16px
+        color: white
+        cursor: pointer
+        &:hover
+            background-color: #CC221B
+
+
+// Wrapper
+
+.wrapper
+    max-width: 1200px
+    margin: 0 auto
+    padding: 0 10px
+    height: 100%
+
+
+header 
+    margin: 32px 0 64px 0
+    height: 40px
+    display: flex
+    justify-content: space-between
+    li
+        list-style: none
+    
+.logo
+    width: 187px
+    margin: 0 
+    img
+     float: left
+     clear: right    
+     height: 36px
+     width: 36px
+     margin-right: 5px
+      
+    h1
+     float: left
+     clear: right  
+     line-height: 40px 
+     margin-block-start: 0
+     padding-block-start: 0
+     margin-block-end: 0
+     text-align: center 
+     font-weight: medium
+     font-size: 20px
+
+ 
+.search 
+    margin: 0  0 0
+    
+    line-height: 40px
+    float: left
+    clear: right 
+    input
+        width: 320px 
+
+.search__input
+    border: 0
+    border-bottom: 1px solid black
+    &:focus
+        font-weight: 500
+        ::-webkit-input-placeholder
+            color: white
+   
+
+.search__button
+    border: 0 
+    background-color: white
+    color: $htc-red  
+    cursor: pointer                       
+    
+.login
+    width: 113px    
+    height: 38px
+    float: right
+    clear: left
+    
+    background-color: $htc-red
+    border-radius: 4px
+    border: none 
+    font-size: 16px
+    color: white
+    cursor: pointer
+    &:hover
+     background-color: #CC221B
+
+.auth
+    width: 180px
+    display: none
+    line-height: 40px
+    vertical-align: center
+    justify-content: flex-end
+    p 
+        
+        font-size: 16px 
+        font-weight: 500
+        clear: right
+    button
+        background-color: white
+        color: $htc-red
+        margin-left: 5px 
+        border: 0
+        font-size: 16px
+        font-weight: 500
+        cursor: pointer
+        
+
+[data-tab-target]
+    display: inline-block
+    font-size: 28px
+    font-weight: 500
+    color: black
+    background-color: white
+    border: 0
+    border-bottom: 2px solid white
+    margin: 0 20px 0 0
+    padding-bottom: 10px
+    cursor: pointer
+    &:hover
+        color: $htc-red
+        border-bottom: 2px solid $htc-red
+
+.tabs
+    text-align: center 
+    margin-bottom: 20px 
+    padding: 0       
+
+[data-tab-content]
+    display: none
+
+.active[data-tab-content]
+    display: block
+
+.films
+    height: 478px
+    float: left
+    clear: right
+    margin-block-start: 0
+    padding-block-start: 0
+    margin-bottom: 29px  
+
+.films__header   
+    font-size: 24px
+    font-weight: 500
+    color: black
+    margin: 0 0 10px 0
+
+.films__list
+    padding-inline-start: 0px
+    margin-block-start: 0px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between    
+
+.films__list_item
+    list-style: none
+    position: relative
+    // float: left
+    // clear: right
+    height: 434px
+    width: 280px
+    margin: 7px 25px 0  0
+    list-style: none
+    cursor: pointer
+    &:hover
+       .films__description
+         opacity: 70
+         z-index: 3  
+       .films__overlay 
+         opacity: 0.7
+         border-radius: 10px
+          
+       
+
+.films__list_item_img
+    height: 370px
+    width: 280px
+    margin-bottom: 16px
+    border-radius: 10px
+    text-align: left
+   
+.films__description
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  height: 370px
+  width: 248px
+  border-radius: 8px
+  opacity: 0
+  transition: .7s ease
+  color: white
+  padding: 20px              
+
+.films__overlay 
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  height: 370px
+  width: 100%
+  border-radius: 8px
+  opacity: 0
+  transition: .5s ease
+  background-color: black        
+
+.cat
+    .films__list_item_img
+        background-image: url(../img/movie_cat.png) 
+
+.batman
+    .films__list_item_img
+        background-image: url(../img/movie_batman.png)
+
+.hollywood
+    .films__list_item_img
+        background-image: url(../img/movie_hollywood.png)
+
+.strip
+    .films__list_item_img
+        background-image: url(../img/movie_strip.png)
+
+
+
+
+
+.films__list_item_name
+    font-size: 20px
+    font-family: 'Rubik', sans-serif
+    font-weight: 300
+    color: #333333 
+        
+            
+.geners
+    // float: left
+    width: 100%
+    margin-bottom: 72px 
+
+.geners__header
+    font-size: 24px
+    line-height: 30px
+    font-weight: 500
+    color: black
+    margin: 0 0 10px 0
+
+.geners__list
+    padding-inline-start: 0px
+    margin-block-start: 0px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+             
+
+.geners__list_item
+    list-style: none
+    position: relative
+    width: 280px
+    height: 208px
+    margin: 20px 20px 29px  0
+    border-radius: 8px
+    // float: left
+    text-align: center
+    list-style: none
+    cursor: pointer
+    &:hover
+     .overlay 
+        opacity: 0.15
+ 
+
+.overlay 
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  height: 100%
+  width: 100%
+  border-radius: 8px
+  opacity: 0
+  transition: .5s ease
+  background-color: black
+        
+
+
+#comedy
+   background: rgb(242,154,74)
+   background: linear-gradient(345deg, rgba(242,154,74,1) 0%, rgba(242,201,76,1) 100%) 
+
+#fantastic
+    background: rgb(47,128,237)
+    background: linear-gradient(345deg, rgba(47,128,237,1) 0%, rgba(86,204,242,1) 100%)
+
+#horror
+    background: rgb(51,51,51)
+    background: linear-gradient(345deg, rgba(51,51,51,1) 0%, rgba(130,130,130,1) 100%)
+
+#drama
+  background: rgb(235,87,87)
+  background: linear-gradient(345deg, rgba(235,87,87,1) 0%, rgba(242,153,74,1) 100%) 
+
+.geners__list_item_smile
+    font-size: 48px
+    margin-block-start: 0
+    margin-block-end: 0
+    margin-top: 60px
+    margin-bottom: 30px
+
+.geners__list_item_name
+    color: white
+    margin-block-start: 0
+    margin-block-end: 0
+    font-size: 20px
+    font-weight: 400 
+
+//TV
+
+.tv__container
+    height: 696px
+    margin-bottom: 72px
+    overflow: auto
+
+
+
+.tv__container_list
+    height: 696px
+    padding-inline-start: 0px
+    margin-block-start: 0px
+
+.tv__container_list_item
+    position: relative
+    height: 162px
+    margin-bottom: 18px
+    &:last-child
+        margin-bottom: 0
+    list-style: none
+    background-color: #F2F2F2 
+    .logo
+        float: left
+        clear: right
+        height: 162px
+        width: 380px
+        margin: 0
+        display: flex
+        justify-content: center
+        align-items: center
+ 
+                      
+.first
+    .logo
+        img
+            height: 64px
+            width: 50px
+
+.two
+    .logo
+        img
+            height: 50px
+            width: 114px
+
+.rbc 
+    .logo
+        img
+            height: 54px
+            width: 54px
+
+.amedia
+    .logo
+        img 
+            height: 64px
+            width: 64px 
+
+
+.tv-list-program
+    float: left
+    padding-inline-start: 0
+    margin: 0 0 0 20px 
+
+
+.tv-list-program__header
+    margin-block-start: 20px
+    width: 100%
+    margin-block-end: 20px 
+    font-size: 20px
+    font-weight: 500     
+
+.tv-list-program__time
+    float: left
+    list-style: none
+    padding-inline-start: 0
+    padding-inline-end: 0
+    li 
+        margin-bottom: 12px 
+    
+    
+.tv-list-program__name
+    float: left
+    list-style: none
+    padding-inline-start: 0
+    padding-inline-end: 0
+    margin-left: 20px
+    li 
+        margin-bottom: 12px 
+
+.tv-list-program_current
+    color: $htc-red    
+//Footer
+
+footer
+    // float: left
+    height: 120px
+    width: 100%
+    
+    background-color: #F2F2F2
+    padding-top: 22px 
+    img 
+     float: left   
+     height: 64px
+     width: 32px
+     margin-right: 36px  
+
+.footer__container
+    margin: 0 auto
+    height: 120px
+    max-width: 1180px
+    
+
+.footer__list
+    float: left
+    padding-inline-start: 0px
+    margin-block-start: 0px
+    margin-block-end: 0px
+    height: 120px
+
+.footer__list_item
+    margin-bottom: 5px
+    list-style: none
+    font-size: 16px
+    line-height: 19px    
+
+.footer__link
+    margin-top: 10px
+    font-size: 16px
+    line-height: 19px  
+    color: $htc-color
+    font-weight: medium
+    text-decoration: none
+    a 
+        text-decoration: none    
+        
+
+
+
+
+    
+
+
+         
