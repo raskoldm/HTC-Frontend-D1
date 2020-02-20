@@ -5,7 +5,7 @@ window.onload = function(){
     const tabs = document.querySelectorAll('[data-tab-target]')
     const tabContents = document.querySelectorAll('[data-tab-content]')
 
-    tabs.forEach(tab =>{
+    tabs.forEach(tab => {
         tab.addEventListener('click',  () => {
             const target = document.querySelector(tab.dataset.tabTarget)
             tabContents.forEach(tabContent => {
@@ -15,7 +15,7 @@ window.onload = function(){
         })
     })
 
-    //Form
+    //Form 
 
     const loginBtn = document.getElementById('login-btn')
     const formOverlay = document.getElementById('form-overlay')
@@ -74,7 +74,7 @@ window.onload = function(){
 
    const checkBox = document.getElementById('remember')
    
-   //Name in local storage
+   //Set  name into local storage
 
    rememberMe = function(inputValue){
     if(checkBox.checked = true){
