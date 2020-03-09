@@ -2,23 +2,23 @@ window.onload = function(){
 
     //Toggle tabs
 
-    const tabs = document.querySelectorAll('[data-tab-target]')
-    const tabContents = document.querySelectorAll('[data-tab-content]')
+    const tabs = document.querySelectorAll('[data-tab-target]');
+    const tabContents = document.querySelectorAll('[data-tab-content]');
 
     tabs.forEach(tab => {
         tab.addEventListener('click',  () => {
-            const target = document.querySelector(tab.dataset.tabTarget)
+            const target = document.querySelector(tab.dataset.tabTarget);
             tabContents.forEach(tabContent => {
-                tabContent.classList.remove('active')
+                tabContent.classList.remove('active');
             })
-            target.classList.add('active') 
+            target.classList.add('active'); 
         })
     })
 
     //Form 
 
-    const loginBtn = document.getElementById('login-btn')
-    const formOverlay = document.getElementById('form-overlay')
+    const loginBtn = document.getElementById('login-btn');
+    const formOverlay = document.getElementById('form-overlay');
 
     
         loginBtn.addEventListener('click', () =>  {
@@ -31,8 +31,8 @@ window.onload = function(){
 
 
 
-        const submitBtn = document.getElementById('submit_btn')
-        const authLogin = document.getElementById('auth_login')
+        const submitBtn = document.getElementById('submit_btn');
+        const authLogin = document.getElementById('auth_login');
 
         submitBtn.addEventListener('click', () =>  {
             if (formOverlay.style.display = "block") {
@@ -43,50 +43,50 @@ window.onload = function(){
 
             if (authLogin.style.display = "none") {
                 authLogin.style.display = "flex";
-                loginBtn.style.display = "none"
+                loginBtn.style.display = "none";
             } else {
                 authLogin.style.display = "none";
             }   
         })
 
-        authLoginBtn = document.getElementById('auth_login_btn')
+        authLoginBtn = document.getElementById('auth_login_btn');
 
         authLoginBtn.addEventListener('click', () =>  {
             if (loginBtn.style.display = "none") {
                 loginBtn.style.display = "block";
-                authLogin.style.display = "none"
+                authLogin.style.display = "none";
               } 
         })
 
     
     //Input name
     
-    const inputName = document.getElementById('name')
+    const inputName = document.getElementById('name');
     
 
     inputName.addEventListener('change', (inputValue) => {
-        inputValue = inputName.value
+        inputValue = inputName.value;
         
-        let authName = document.getElementById('auth_name').innerHTML = inputValue
+        let authName = document.getElementById('auth_name').innerHTML = inputValue;
         
-        rememberMe(inputValue)
+        rememberMe(inputValue);
     })
 
-   const checkBox = document.getElementById('remember')
+   const checkBox = document.getElementById('remember');
    
    //Set  name into local storage
 
    rememberMe = function(inputValue){
     if(checkBox.checked = true){
-        console.log('check')
-        localStorage.setItem('check_name', inputValue)
+        console.log('check');
+        localStorage.setItem('check_name', inputValue);
         if (localStorage.getItem('check_name') != null){
-            let checkName =  localStorage.getItem('check_name')
+            let checkName =  localStorage.getItem('check_name');
             console.log(checkName)
-            let authName = document.getElementById('auth_name').innerHTML = checkName
+            let authName = document.getElementById('auth_name').innerHTML = checkName;
 
         }else{
-            let authName = document.getElementById('auth_name').innerHTML = inputValue    
+            let authName = document.getElementById('auth_name').innerHTML = inputValue;    
         }
     } 
    }
@@ -94,12 +94,12 @@ window.onload = function(){
    //Stay online
 
    let outerCheck = localStorage.getItem('check_name')
-   console.log(outerCheck)
+   console.log(outerCheck);
 
-   if(outerCheck != null){
+   if(outerCheck){
         let authName = document.getElementById('auth_name').innerHTML = outerCheck
-        authLogin.style.display = "flex"
-        loginBtn.style.display = "none"
+        authLogin.style.display = "flex";
+        loginBtn.style.display = "none";
    }
 
     
