@@ -14,16 +14,16 @@
      <script src="js/index.js"></script>
 
      <div class="form-overlay" id="form-overlay">
-          <div class="outer">
-               <form class="form-overlay__container" action="">
-                    <h2>Вход</h2>
-                    <input type="text" id="name" placeholder="Логин">
-                    <input type="text" id="password" placeholder="Пароль">
-                    <div class="checkbox__container">
-                         <input type="checkbox" id="remember" name="remember">
-                         <label class="remember_label" for="remember"><p>Запомнить</p></label>
+          <div class="form-overlay__container">
+               <form class="form-overlay__form" action="">
+                    <h2 class="form-overlay__header">Вход</h2>
+                    <input class="form-overlay__name" type="text" id="name" placeholder="Логин">
+                    <input class="form-overlay__password" type="text" id="password" placeholder="Пароль">
+                    <div class="form-overlay__checkbox-container">
+                         <input class="form-overlay__remember-name" type="checkbox" id="remember" name="remember">
+                         <label class="form-overlay__remember-label" for="remember"><p>Запомнить</p></label>
                     </div>
-                    <div id="submit_btn" class="form-login">
+                    <div class="form-overlay__submit-btn" id="submit_btn">
                          войти
                     </div>   
                </form>
